@@ -1,0 +1,470 @@
+/*Set font of all text*/
+h1 {
+    font-family: "Proxima Nova", Lato;
+    font-size: 50px;
+    word-break: break-all;
+}
+
+p {
+    font-family: "Proxima Nova", Lato;
+}
+
+a {
+    font-family: "Proxima Nova", Lato;
+    text-decoration: none;
+}
+
+body {
+    opacity: 1;
+    transition: 1.5s opacity;
+    margin: 0;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+html {
+    max-height: 100vh;
+    max-width: 100vw;
+    background-color: #000000;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    margin: auto;
+}
+
+@media screen and (max-height: 700px) {
+    section {
+        height: 700px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    section {
+        width: 375px;
+    }
+}
+
+/* Centers Profile Picture */
+.title {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* Navigation Bar */
+nav {
+    position: fixed;
+    width: 100%;
+    transition: 1s;
+    z-index: 9999;
+    overflow: hidden;
+    background-color: black;
+    top: 0; /* Position the navbar at the top of the page */
+}
+
+/* Black Bar at top of page */
+nav ul {
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+
+/* elements next to each other, top and bottom margins/paddings respected */
+nav ul li {
+    display: inline-block;
+}
+
+/* About, Portfolio, Coursework */
+nav ul li a {
+  float: left;
+  display: block;
+  color: red;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:30px
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    color: purple;
+    font-weight: 600;
+}
+
+.socialmedia {
+    position: fixed;
+    float: right;
+    right: 0px;
+    padding: 10px 36px;
+    top: 1em;
+}
+
+@media(max-width: 900px) {
+    .socialmedia {
+        position: fixed;
+        float: right;
+        left: 2.5em;
+        top: .75em;
+        right: auto;
+        padding: 8px;
+    }
+
+    nav ul {
+        max-height: 0;
+        background: rgba(0, 0, 0, 0.75);
+        transition: 1s;
+    }
+
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 24px 0;
+        text-align: center;
+    }
+}
+
+
+/* Home Section */
+.home {
+  background-color: white;
+  margin: auto;
+  position: relative;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.intro{
+  width: 90%;
+  background-color: gold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 25px;
+  transform: translate(-50%, -50%);
+}
+
+.intro h2 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    color: blue;
+}
+
+.intro ul {
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+
+/* elements next to each other, top and bottom margins/paddings respected */
+.intro ul li {
+    display: inline-block;
+}
+
+/* About, Portfolio, Coursework */
+.intro ul li h2 {
+  color: blue;
+  text-align: center;
+  text-decoration: none;
+  font-size:25px
+}
+
+.intro ul li h2:hover {
+    text-decoration: none;
+    color: purple;
+    font-weight: 600;
+}
+
+.mySlides {
+  display:none;
+}
+
+/* About Section */
+
+.about {
+    background-position: center top;
+    margin: auto;
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.aboutPage {
+    width: 90%;
+    background-color: rgba(0,0,0,.9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 25px;
+    transform: translate(-50%, -50%);
+}
+
+.selfportrait {
+    height: 200px;
+    width: 200px;
+    border-radius: 70%;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+.aboutPage p {
+    font-size: calc(10px + 1vw);
+    color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.btn {
+    transition: 0.4s all ease;
+    padding: 10px 15px;
+    border: 1px solid white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    font-size: calc(15px + 1vw);
+    letter-spacing: 3px;
+}
+
+.btn:hover {
+    color: black;
+    background-color: greenyellow;
+}
+
+/* Portfolio Section */
+.portfolio {
+  background-color: #000000;
+  margin: auto;
+  position: relative;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+#portfolioSection .row {
+    margin: 150px auto 10vw auto;
+    width: 95%;
+}
+
+/* Create three equal columns that floats next to each other */
+#portfolioSection .column {
+    float: left;
+    width: calc(100%/3);
+}
+
+/* Hover Portion of Cell */
+.cell {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 12px;
+    width: 101%;
+    height: 101%;
+    background-color: rgba(255, 255, 255,0.9);
+}
+
+.cell h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    color: #000000;
+}
+
+.cell a {
+    font-size: 100%;
+    font-weight: bold;
+}
+
+.cell .btn {
+    margin: 0;
+    padding: 8px;
+}
+
+.cell p {
+    font-size: 1vw;
+    color: rgba(48, 62, 74,1);
+}
+
+
+
+/* Content */
+.content {
+    background-color: rosybrown;
+    position: relative;
+    padding: 10px;
+    transition: 0.5s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+}
+
+.content img {
+    max-width: 100%;
+    height: 20vw;
+}
+
+.content:hover .cell {
+    opacity: 1;
+}
+
+/* Center website */
+    .main {
+    width: 100%;
+    margin: auto;
+}
+
+.desktop {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+@media only screen
+    and (max-device-width : 1024px)  {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+}
+
+@media only screen
+    and (max-width : 600px)  {
+    .content img {
+        max-width: auto;
+        min-height: 60vw;
+        height: auto;
+        width: 100%;
+    }
+}
+
+/* Single column-layout instead of three columns */
+@media screen and (max-width: 900px) {
+
+    #portfolioSection .column {
+        width: 50%;
+    }
+
+    .content img {
+        max-width: auto;
+        height: 35vw;
+        width: 100%;
+    }
+
+    .cell p {
+        font-size: 1.5vw;
+    }
+
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    #portfolioSection .column {
+        width: 100%;
+    }
+
+    .content img {
+        max-width: auto;
+        height: auto;
+        width: 100%;
+    }
+
+    .cell p {
+        font-size: 3vw;
+    }
+
+}
+
+/* Coursework Section */
+
+#courseworkSection {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+}
+
+/* Float two columns side by side */
+.edu.column {
+    flex: 1;
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.edu.row {
+    width: 90%;
+    margin: auto;
+    display: flex;
+}
+
+/* Style the counter cards */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 8px;
+    text-align: center;
+    height: 100%;
+    background-color: #f1f1f1;
+}
+
+.card h3 {
+    font-weight: bold;
+    color: #3b7ea1;
+}
+
+.card strong {
+    color: #3b7ea1;
+    font-weight: 700;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 900px) {
+    .edu.column {
+        width: 100%;
+        display: block;
+        margin-bottom: 0;
+    }
+    .edu.row {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    background: rgba(0, 0, 0, 0.90);
+    color: white;
+    text-align: center;
+    z-index: 999;
+}
